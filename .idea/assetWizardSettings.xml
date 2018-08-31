@@ -13,7 +13,7 @@
                       <PersistentState>
                         <option name="values">
                           <map>
-                            <entry key="resourceDirectory" value="sichuan" />
+                            <entry key="resourceDirectory" value="chongqing" />
                           </map>
                         </option>
                       </PersistentState>
@@ -30,10 +30,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="3ca633" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground" />
-                                      <entry key="outputName" value="ic_launcher_sichuan" />
+                                      <entry key="backgroundColor" value="3564a6" />
                                     </map>
                                   </option>
                                 </PersistentState>
