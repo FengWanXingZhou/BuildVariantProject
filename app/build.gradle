@@ -21,7 +21,7 @@ android {
         minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,29 +31,53 @@ android {
         }
         debug {
             minifyEnabled false
+            signingConfig release.signingConfig
         }
     }
+    sourceSets {
+        chongqing {
 
-    flavorDimensions("platform","zone")
-    productFlavors{
+            java.srcDirs('src/chongqing/java')
+            res.srcDirs('src/chongqing/res')
+            manifest.srcFile('src/chongqing/AndroidManifest.xml')
 
-        chongqing{
+        }
+        sichuan {
+            java.srcDirs('src/sichuan/java')
+            res.srcDirs('src/sichuan/res')
+            manifest.srcFile('src/sichuan/AndroidManifest.xml')
+        }
+    }
+    flavorDimensions("platform", "zone")
+    productFlavors {
+
+        chongqing {
             dimension "zone"
+            versionNameSuffix "-chongqing"
+            applicationIdSuffix ".chongqing"
+
+
         }
-        sichuan{
+        sichuan {
             dimension "zone"
+            versionNameSuffix "-sichuan"
+            applicationIdSuffix ".sichuan"
         }
-        hisi{
+        hisi {
             dimension "platform"
+            signingConfig signingConfigs.hisi
         }
-        mstar{
+        mstar {
             dimension "platform"
+            signingConfig signingConfigs.mstar
         }
 
 
-
-
-
+    }
+    android.applicationVariants.all{
+        variant->variant.outputs.all {
+                outputFileName = "Variant-${variant.name}-${variant.versionName}.apk"
+        }
 
     }
 

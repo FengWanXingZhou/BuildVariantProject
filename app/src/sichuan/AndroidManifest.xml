@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.buildvariantproject">
+
+    <application
+        android:icon="@mipmap/ic_launcher_sichuan"
+        tools:replace="android:icon">
+        <activity android:name=".view.activity.SiChuanActivity">
+
+        </activity>
+    </application>
+</manifest>

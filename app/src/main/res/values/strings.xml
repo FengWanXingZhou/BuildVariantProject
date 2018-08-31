@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BuildVariantProject</string>
+    <string name="zone">全国</string>
 </resources>
